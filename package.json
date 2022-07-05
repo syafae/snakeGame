@@ -1,0 +1,25 @@
+{
+  "name": "snakegame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syafae/snakeGame.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syafae/snakeGame/issues"
+  },
+  "homepage": "https://github.com/syafae/snakeGame#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "eslint": "^8.19.0"
+  }
+}
