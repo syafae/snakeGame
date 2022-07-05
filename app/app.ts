@@ -1,4 +1,3 @@
-
 import { Food } from './food.js'
 import { Input } from './input.js'
 import { Snake } from './snake.js'

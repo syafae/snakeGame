@@ -1,10 +1,10 @@
 import { Input } from './input.js';
 export class Snake {
     SnakeBody;
+    newSegments = 0;
     constructor() {
         this.SnakeBody = [{ x: 12, y: 12 }];
     }
-    newSegments = 0;
     update() {
         this.addSegments();
         let direction = Input.getInputDirection();

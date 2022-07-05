@@ -3,7 +3,7 @@ export class Food {
     expansionRate = 5;
     snake;
     constructor(snake) {
-        this.food = { x: 10, y: 1 };
+        this.food = { x: 10, y: 10 };
         this.snake = snake;
     }
     update() {
@@ -20,13 +20,16 @@ export class Food {
         gameBoard.appendChild(foodElement);
     }
     getRandomFoodPosition() {
-        let newPosition;
-        while (newPosition === undefined || this.snake.onSnake(newPosition)) {
-            let x = Math.floor(Math.random() * 24) + 1;
-            let y = Math.floor(Math.random() * 24) + 1;
-            newPosition = { x: x, y: y };
-            return newPosition;
+        let newPosition = this.randomize();
+        while (this.snake.onSnake(newPosition)) {
+            newPosition = this.randomize();
         }
+        return newPosition;
+    }
+    randomize() {
+        let x = Math.floor(Math.random() * 24) + 1;
+        let y = Math.floor(Math.random() * 24) + 1;
+        return { x: x, y: y };
     }
 }
 //# sourceMappingURL=food.js.map

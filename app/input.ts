@@ -1,9 +1,7 @@
 import { Position } from './position.js'
 export class Input {
     static inputDirection = { x: 0, y: 0 }
-
     static listen(): void {
-
         window.addEventListener('keydown', (e) => {
             switch (e.key) {
                 case 'ArrowLeft':
