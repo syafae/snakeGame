@@ -22,11 +22,11 @@ export class Food {
     getRandomFoodPosition() {
         let newPosition;
         while (newPosition === undefined || this.snake.onSnake(newPosition)) {
-            let x = Math.floor(Math.random() * 24) + 1;
-            let y = Math.floor(Math.random() * 24) + 1;
+            const x = Math.floor(Math.random() * 24) + 1;
+            const y = Math.floor(Math.random() * 24) + 1;
             newPosition = { x: x, y: y };
-            return newPosition;
         }
+        return newPosition;
     }
 }
 //# sourceMappingURL=food.js.map

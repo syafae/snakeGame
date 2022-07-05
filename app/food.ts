@@ -22,13 +22,14 @@ export class Food {
         foodElement.classList.add('food')
         gameBoard.appendChild(foodElement)
     }
-    getRandomFoodPosition(): Position | undefined {
+    getRandomFoodPosition(): Position {
         let newPosition: Position | undefined
         while (newPosition === undefined || this.snake.onSnake(newPosition)) {
             const x = Math.floor(Math.random() * 24) + 1
             const y = Math.floor(Math.random() * 24) + 1
             newPosition = { x: x, y: y }
-            return newPosition
+
         }
+        return newPosition
     }
 }
