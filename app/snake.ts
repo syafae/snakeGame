@@ -9,7 +9,7 @@ export class Snake {
     private newSegments = 0
     update(): void {
         this.addSegments()
-        let direction = Input.getInputDirection()
+        const direction = Input.getInputDirection()
         for (let i = this.SnakeBody.length - 2; i >= 0; i--) {
             this.SnakeBody[i + 1] = { ...this.SnakeBody[i] }
         }

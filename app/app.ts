@@ -2,11 +2,11 @@
 import { Food } from './food.js'
 import { Input } from './input.js'
 import { Snake } from './snake.js'
-let SNAKE_SPEED = 5
+const SNAKE_SPEED = 5
 let lastRenderTime = 0
 let gameOver = false
-let snake = new Snake();
-let food = new Food(snake);
+const snake = new Snake();
+const food = new Food(snake);
 const gameBoard = <HTMLDivElement>document.getElementById('game-board')
 Input.listen()
 function main(currentTime: number) {
@@ -33,7 +33,7 @@ function update(): void {
     gameOver = snake.checkDeath()
 }
 function draw(): void {
-    gameBoard!.innerHTML = ''
+    gameBoard.innerHTML = ''
     snake.draw(gameBoard)
     food.draw(gameBoard)
 }
